@@ -13,3 +13,16 @@ function hideComments() {
       x.innerHTML = "Show comments";
     }
 }
+
+function validateForm() {
+    var x = document.forms["myForm"]["author"].value;
+    var y = document.forms["myForm"]["tekst"].value;
+    if (x === "") {
+      alert("Author must be filled out");
+
+    } else if (y === ""){
+        alert("Comment must be filled out");
+        return false;
+    }
+}
+

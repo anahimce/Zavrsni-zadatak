@@ -82,7 +82,7 @@
                             <ul>   
                                 <li><div>posted by: <strong><?php echo $comment['author'] ?> </strong> </div>
                                     <div> <?php echo $comment['tekst'] ?> </div>
-                                </li>
+                                </li> <button class="btn1" onclick="myFunction()">Delete</button> 
                                 <hr>
                             </ul>
                         </div>
