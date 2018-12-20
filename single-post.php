@@ -61,34 +61,16 @@
                     <p><?php echo($singlePost['body']) ?></p>
                 </div><!-- /.blog-post -->
 
+                <form id="deletePostForm" method="post" action="delete-post.php">
+                    <input type="hidden" class="confirm" name="post_id" value="<?php echo $_GET['post_id']?>">
+                    <button class="btn btn-primary" type ="submit" name="postDelete">Delete this post</button>
+                </form>
+                <br>
+                
                 <?php include ('comments.php');?>
                 
-                <div id = "comments">
-                    <h3> Comments </h3>               
-                    <?php
-                        $sqlComments =
-                            "SELECT *, COALESCE (comments.author, posts.author) as author
-                            FROM comments JOIN posts ON comments.post_id = posts.id 
-                            WHERE comments.post_id = {$_GET['post_id']}";
-
-                        $statement = $connection->prepare($sqlComments);
-                        $statement->execute();
-                        $statement->setFetchMode(PDO::FETCH_ASSOC);
-                        $comments = $statement->fetchAll();
-                    
-                        foreach ($comments as $comment) {
-                    ?>
-                        <div class="single-comment">
-                            <ul>   
-                                <li><div>posted by: <strong><?php echo $comment['author'] ?> </strong> </div>
-                                    <div> <?php echo $comment['tekst'] ?> </div>
-                                </li> <button class="btn1" onclick="myFunction()">Delete</button> 
-                                <hr>
-                            </ul>
-                        </div>
-                    <?php } ?>
-                    </div>
-
+                
+                            
                 <nav class="blog-pagination">
                     <a class="btn btn-outline-primary" href="#">Older</a>
                     <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
@@ -96,7 +78,7 @@
 
             </div><!-- /.blog-main -->
 
-            <?php include ('sidebar.php')?>
+            <?php include ('sidebar.php')?>    
             
         </div><!-- /.row -->
                 <?php
@@ -105,12 +87,11 @@
                     }
                 ?>
 
-        </main><!-- /.container -->
+    </main><!-- /.container -->
 
         <?php include ('footer.php')?>
 
-        <script src = main.js>     
-        </script>
+        <script src = main.js> </script>
 </body> 
 </html>
 

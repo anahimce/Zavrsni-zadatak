@@ -26,3 +26,27 @@ function validateForm() {
     }
 }
 
+
+function validate() {
+  var s = document.forms["createPostForm"]["title"].value;
+  var b = document.forms["createPostForm"]["body"].value;
+  var c = document.forms["createPostForm"]["author"].value;
+  var d = document.forms["createPostForm"]["created_at"].value;
+
+  if (s === "") {
+    alert("Title must be filled out");
+  } else if (b === ""){
+      alert("Text must be filled out");
+  } else if (c === ""){
+  alert("Text must be filled out");
+  } else if (d === ""){
+  alert("Date&Time must be filled out");
+  return false;
+  }
+}
+
+var el = document.getElementById('deletePostForm');
+
+el.addEventListener('submit', function(){
+    return confirm('Do you really want to delete this post?');
+}, false);
