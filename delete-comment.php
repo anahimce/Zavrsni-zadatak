@@ -13,17 +13,21 @@
         echo $e->getMessage();
     }
         
-        if (isset($_POST ['commentDelete'])){
+    $deleteid = $_POST['id'];
+    $post_id = $_POST['post_id'];
 
-        $deleteid = $_POST['commId'];
-        $post_id = $_POST ['postId'];
 
+    if( isset($_POST['commentDelete'])){
+
+     $sql = "DELETE FROM comments WHERE id=$deleteid ";
     
-        $sql = "DELETE FROM comments WHERE id = $deleteid";
-        $connection->exec($sql);
-        header("Location: http://localhost:8000/single-post.php?post_id=" .$post_id);   
-    } 
+        $connection->exec($sql);  
+       
+        
+        header('Location: http://localhost:8000/single-post.php?post_id=' .$post_id);
+    } else {
+
         $connection = null;
-    
+        header('Location: http://localhost:8000/single-post.php?post_id=' .$post_id);}
 ?>
 

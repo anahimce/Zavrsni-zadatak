@@ -46,16 +46,16 @@
 
             <div class="blog-post">
                 <form name="createPostForm" action="new-post.php" form method="post" onsubmit="return validate()"> 
-                <label id="first"> Title: </label><br>
+                <label> Title: </label><br>
                 <input type="text" name="title" required><br>
 
-                <label id="first"> Text: </label><br/>
+                <label> Text: </label><br>
                 <textarea name="body" rows="10" cols="70" required></textarea> <br> 
 
-                <label id="first"> Author: </label><br>
+                <label> Author: </label><br>
                 <input type="text" name="author" required><br> 
 
-                <label id="date"> Date&Time: </label><br>
+                <label> Date&Time: </label><br>
                 <input type="datetime-local" name="created_at" value="2018-12-18 12:12:00" required><br>    
 
                 <input type="submit" class="button" value="Save">

@@ -1,6 +1,5 @@
  <?php
-    header("Location: posts.php?post_id={$_POST['post_id']}");
-    
+     header('Location: index.php');  
     $servername = "127.0.0.1";
     $username = "root";
     $password = "vivify";
@@ -15,15 +14,26 @@
         echo $e->getMessage();
     }
 
-    $post_id = $_POST['post_id'];
 
-    $sql = "DELETE FROM posts WHERE id=$post_id"; 
-    $statement = $connection->prepare($sql);  
-    $statement->execute();
-
-    
-
+    $id =$_POST['id'];
    
+   
+  
+    if( isset($_POST['postDelete'])){ 
+
+        $sql = "DELETE FROM comments WHERE post_id=$id";
+        $connection->exec($sql);   
+       // header('Location: index.php');
+          
+        $sql1 = "DELETE FROM posts WHERE id=$id";
+        $connection->exec($sql1);   
+       // header('Location: index.php');
+
+       } else {
+           $connection = null;
+           }  
+    
+    
 
        
 ?>

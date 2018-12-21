@@ -62,15 +62,13 @@
                 </div><!-- /.blog-post -->
 
                 <form id="deletePostForm" method="post" action="delete-post.php">
-                    <input type="hidden" class="confirm" name="post_id" value="<?php echo $_GET['post_id']?>">
+                    <input type="hidden" class="confirm" name="id" value="<?php echo $singlePost['id']?>">
                     <button class="btn btn-primary" type ="submit" name="postDelete">Delete this post</button>
                 </form>
                 <br>
                 
                 <?php include ('comments.php');?>
-                
-                
-                            
+                                   
                 <nav class="blog-pagination">
                     <a class="btn btn-outline-primary" href="#">Older</a>
                     <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
