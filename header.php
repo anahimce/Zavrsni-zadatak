@@ -1,5 +1,4 @@
 
-
 <header>
     <div class="blog-masthead">
         <div class="container">

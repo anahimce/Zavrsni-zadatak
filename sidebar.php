@@ -46,6 +46,7 @@
     <aside class="col-sm-3 ml-sm-auto blog-sidebar">
         <div class="sidebar-module sidebar-module-inset">
             <h4>Latest posts</h4>
+            
             <?php  foreach ($posts as $post) {  ?>
                 <p><a href = "single-post.php?post_id=<?php echo($post['id']) ?>"><?php echo($post['title']) ?></p>
             <?php     }   ?>

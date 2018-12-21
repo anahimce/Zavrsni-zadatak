@@ -41,14 +41,12 @@
         $author = $_POST['author'];
         $text = $_POST['tekst'];
         $post_id = $_POST['post_id'];
-
         
         if($author && $text && $post_id) {
             $sql = "INSERT INTO comments (author, tekst, post_id) VALUES ('$author','$text', '$post_id')";
             $connection->exec($sql);
 
            header('Location: http://localhost:8000/single-post.php?post_id=' .$post_id);
-           
           
         } else if ($_POST === true) {
             $connection = null;

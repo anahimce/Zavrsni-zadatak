@@ -45,6 +45,7 @@ function validate() {
   }
 }
 
+
 var el = document.getElementById('deletePostForm');
 
 el.addEventListener('submit', function(){

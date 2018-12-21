@@ -23,7 +23,6 @@
     
         $connection->exec($sql);  
        
-        
         header('Location: http://localhost:8000/single-post.php?post_id=' .$post_id);
     } else {
 

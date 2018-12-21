@@ -14,11 +14,8 @@
         echo $e->getMessage();
     }
 
-
     $id =$_POST['id'];
    
-   
-  
     if( isset($_POST['postDelete'])){ 
 
         $sql = "DELETE FROM comments WHERE post_id=$id";

@@ -16,7 +16,6 @@ header("Location: index.php");
         echo $e->getMessage();
     }
    
-
                  if (isset($_POST['action'])){
                   
                   $post_title = $_POST['title'];
@@ -24,14 +23,11 @@ header("Location: index.php");
                   $post_author = $_POST['author'];
                   $post_date = $_POST['created_at'];  
          
-
                   $sql="INSERT INTO posts (title,body,author,created_at) VALUES ('$post_title', '$post_body', '$post_author', '$post_date')";
                   $statement = $connection->prepare($sql); 
                   $statement->execute();
                   $statement->setFetchMode(PDO::FETCH_ASSOC);
                   $posts = $statement->fetchAll();
-
-
                   
                 }
 

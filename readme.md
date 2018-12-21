@@ -1,1 +1,1 @@
-echo "# Zavrsni-zadatak" 
+echo "# Zavrsni zadatak" 

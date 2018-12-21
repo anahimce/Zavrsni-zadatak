@@ -21,7 +21,7 @@
 </head>
 <body>
 
-    <h3>Your comment:</h3>
+    <h4>Your comment:</h4>
 
     <form name="myForm" action="create-comment.php" onsubmit="return validateForm()"  method="POST">
     <p><span class="error">* required field</span></p>

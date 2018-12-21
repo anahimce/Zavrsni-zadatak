@@ -74,7 +74,6 @@
 
 </main><!-- /.container -->
 
-
 <?php include ('footer.php') ?>
 
 </body>

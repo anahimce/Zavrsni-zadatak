@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -36,6 +35,7 @@
 </main><!-- /.container -->
 
 <?php include_once ('footer.php');?>
+
 
 </body>
 </html>
